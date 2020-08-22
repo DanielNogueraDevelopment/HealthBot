@@ -42,8 +42,23 @@
                 <hr style="border: 1px solid white" />
             </header>
 
-
+            <div class="alarm">
+                <p>You can add as many medication notifications as you wish to</p>
+                <label>Medication:</label><input type="text" text="medication" id="med">,
+                <label>Daily hour (military time):</label><input type="text" text="medication" id="time">,
+                <button id="add">Add daily notification</button id="add">
+                <script>
+                    $(document).ready(function(){
+                        $("#add").click(function(){
+                            cordova.plugins.notification.local.schedule({
+                            title:"Make sure you take your " + $("#med").val(),
+                            trigger: {every:{hour:$("$time").val()}}
+                        })
+                    })
+                    })
+                </script>
+            </div>
 
         </body>
-
+        <script type="text/javascript" src="cordova.js"></script>
         </html>
