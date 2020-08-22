@@ -1,0 +1,52 @@
+.navmenu {
+    font-family: tahoma;
+    text-align: center;
+    width: 75%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+}
+
+a {
+    color: darkblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    background-color: darkblue
+}
+
+.words {
+    background-color: white;
+    color: #132B54;
+    display: block;
+    width: 98%;
+    padding: 1%;
+    margin: auto;
+}
+
+body {
+    background: lightblue
+}
+
+h2 {
+    text-align: left;
+    font-family: verdana;
+    margin-left: 3%;
+    color: #6DA0F7;
+}
+
+p {
+    text-align: justify;
+    font-family: tahoma;
+    margin-left: 3%;
+    margin-right: 3%
+}
+
+.team {
+    justify-content: center;
+    color: darkblue;
+    font-family: tahoma;
+    font-style: italic;
+    font-size: x-small
+}

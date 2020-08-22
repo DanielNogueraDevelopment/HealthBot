@@ -5,15 +5,17 @@
 $(document).ready(function() {
     //all code runs here where page is loaded
     $(".add").click(function() {
-        var contact = "<div><textarea>Insert their number here</textarea><a href='#'>CALL</a></div>"
+        var contact = "<div><input type='tel'>Insert their number here</input><a href='#'>CALL</a></div>"
         $(".contact-list").append(contact);
-        $(".contact-list textarea:last-child").on("change keyup paste", function(this) {
-            this.next().attr("href", "tel:" + this.val())
-        })
+        $(".contact-list div:last-child input").on("change keyup paste", function chg() {
+            console.log("yo, num changed!")
+            me = $(".contact-list div:last-child input")
+            me.next().attr("href", "tel:" + me.val())
+        });
 
-    })
+    });
 
 
 
 
-})
+});
