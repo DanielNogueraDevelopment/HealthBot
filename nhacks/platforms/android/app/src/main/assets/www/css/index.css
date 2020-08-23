@@ -43,6 +43,11 @@ p {
     margin-right: 3%
 }
 
+.medic {
+    text-align: center;
+    font-style: italic
+}
+
 .team {
     justify-content: center;
     color: darkblue;
@@ -55,4 +60,10 @@ p {
     font-family: tahoma;
     font-size: small;
     font-style: italic
+}
+
+a:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+    transition: all ease 500ms
 }

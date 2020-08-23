@@ -35,7 +35,7 @@ $(document).ready(function() {
     //all code runs here where page is loaded
     $(".add").click(function() {
         // here
-        var contact = "<div><input type='tel'> <span class='yeehaw'>Insert number here</span></input><a href='#' >    CALL </a></div>"
+        var contact = "<div><input type='tel'> <span class='yeehaw'>Insert number here </span></input><a href='#' > CALL </a></div>"
 
         $(".contact-list").append(contact);
         $(".contact-list div:last-child input").on("change keyup paste", function chg() {

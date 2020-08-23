@@ -59,17 +59,21 @@ CSS is a wonderful language to learn in general for web development
                         <td style="width: 25%"> <a href="Symptom.html"> Symptom Check </a> </td>
                         <td style="width: 25%"> <a href="Medication.html"> Medication Alarm </a> </td>
                         <td style="width: 25%"> <a href="emergency.html"> Emergency System </a> </td>
-                </table>
+                </table><br/>
+
 
                 <hr style="border: 1px solid white" />
             </header>
 
-            <div class="alarm">
-                <p>You can add as many medication notifications as you wish to</p>
-                <label>Medication:</label><input type="text" text="medication" id="med">,
-                <label>hour:</label><input type="text" text="medication" id="time-h">,
-                <label>minute:</label><input type="text" text="medication" id="time-m">
-                <button id="add">Add daily notification</button id="add">
+            <div class="alarm" style="background-color: white; text-align: center"><br/>
+                <h2 style="text-align: center"> Medication Alarm </h2>
+                <div style="font-family: tahoma; margin-top: 1%">
+                    <p class="medic" style="text-align: center"> You can add as many medication notifications as you wish to</p>
+                    <label>Medication: </label><input type="text" text="medication" id="med">
+                    <label>Hour: </label><input type="text" text="medication" id="time-h">
+                    <label>Minute: </label><input type="text" text="medication" id="time-m"><br/><br/>
+                    <button id="add">Add daily notification</button id="add"><br/><br/>
+                </div>
                 <!-- <script type="text/javascript" src="cordova.js"></script> -->
                 <script>
                     $(document).ready(function(){

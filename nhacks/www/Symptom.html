@@ -63,11 +63,28 @@ CSS is a wonderful language to learn in general for web development
 
                 <hr style="border: 1px solid white" />
             </header>
+            <br/>
+            <div class="words">
+                <h2> Symptom Checker </h2>
+                <p>To use HealthBot's symptom checker, enter a symptom you're experiencing below and we will provide information on what your symptoms might mean. For example, type in <span style="font-style: italic">runny-nose</span> or <span style="font-style: italic">fever</span>.</p>
+                <div class="symptom-checker" style="text-align: center">
+                    <input class="symptoms" type="text">
+                    <button class="search">Search</button>
+                    <!--IT WORKS EUREKA -->
+                </div>
+            </div><br/>
+            <div class="words">
+                <h2> Common Ailments </h2>
+                <p>The HealthBot team has compiled a list of some of the most common health issues people currently face. Feel free to compare any symptoms you might have to the list below.</p>
+                <ul style="font-family: tahoma">
+                    <li><span style="font-weight: bold">Common cold- </span> runny nose, sneezing, congestion, phlegm, redness of eyes</li>
+                    <li><span style="font-weight: bold">Flu- </span> fever, chills, muscle ache, headache, shortness of breath</li>
+                    <li><span style="font-weight: bold">Strep throat- </span> cough, hoarse and sore throat, difficulty swallowing </li>
+                    <li><span style="font-weight: bold">Ear Infection- </span> ear pain, fever, irritability, difficulty sleeping </li>
+                    <li><span style="font-weight: bold">COVID-19- </span> fever, cough, difficulty breathing, inability to smell or taste </li>
+                </ul>
+            </div><br/>
 
-            <div class="symptom-checker">
-                <input class="symptoms" type="text">
-                <button class="search">Search</button>
-            </div>
             <script type="text/javascript" src="cordova.js"></script>
             <script type="text/javascript" src="js/main.js"></script>
         </body>
