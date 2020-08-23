@@ -50,3 +50,9 @@ p {
     font-style: italic;
     font-size: x-small
 }
+
+.yeehaw {
+    font-family: tahoma;
+    font-size: small;
+    font-style: italic
+}

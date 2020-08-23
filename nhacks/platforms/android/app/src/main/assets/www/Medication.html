@@ -21,6 +21,8 @@ CSS is a wonderful language to learn in general for web development
 -->
 <!-- Actually i would suggest learning html.  we could still use some improvements there -->
 <!-- That code is oriented toward a console application.  I don't think it will be usable.   -->
+<!-- Hey guys, sorry I went awol, I can do some more html & css things now. 
+    I was trying to do so earlier, but I was confused on how to get the projec to update and see the output.-->
 
 <head>
     <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
@@ -55,7 +57,7 @@ CSS is a wonderful language to learn in general for web development
                     <tr>
                         <td style="width: 25%"> <a href="index.html"> Home </a> </td>
                         <td style="width: 25%"> <a href="index.html"> Symptom Check </a> </td>
-                        <td style="width: 25%"> <a href="index.html"> Medication Alarm </a> </td>
+                        <td style="width: 25%"> <a href="Medication.html"> Medication Alarm </a> </td>
                         <td style="width: 25%"> <a href="emergency.html"> Emergency System </a> </td>
                 </table>
 
@@ -68,18 +70,19 @@ CSS is a wonderful language to learn in general for web development
                 <label>hour:</label><input type="text" text="medication" id="time-h">,
                 <label>minute:</label><input type="text" text="medication" id="time-m">
                 <button id="add">Add daily notification</button id="add">
+                <script type="text/javascript" src="cordova.js"></script>
                 <script>
                     $(document).ready(function(){
                         $("#add").click(function(){
                             cordova.plugins.notification.local.schedule({
                             title:"Take your " + $("#med").val(),
-                            trigger: {every:{hour:$("$time-h").val(), minute:$("$time-m")}}
+                            trigger: {every:{hour:$("#time-h").val(), minute:$("#time-m").val()}}
                         })
                     })
-                    })
+                    }) 
                 </script>
             </div>
 
         </body>
-        <script type="text/javascript" src="cordova.js"></script>
+        
         </html>

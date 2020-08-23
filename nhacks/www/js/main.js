@@ -35,21 +35,22 @@ $(document).ready(function() {
     //all code runs here where page is loaded
     $(".add").click(function() {
         // here
-        var contact = "<div><input type='tel'> <span class='yeehaw'>Insert their number here</span></input><a href='#'>CALL</a></div>"
-            //You can't use double quotations.  only single quotations  gotnicchea
+        var contact = "<div><input type='tel'> <span class='yeehaw'>Insert number here</span></input><a href='#' class ='call'> CALL </a></div>"
+
         $(".contact-list").append(contact);
         $(".contact-list div:last-child input").on("change keyup paste", function chg() {
             console.log("yo, num changed!") //haha love this <- lol yeah i used that for bug testing noice
             me = $(".contact-list div:last-child input")
             me.next().attr("href", "tel:" + me.val())
         });
-        // there's no way for me to use css styling on the insert number here thing right? oh cool, do i just do style = "" like in html or something else?
-        //that works.  I think giving it a class from the css file would work too.  
-        //ok.  The inserted html is still just normal html
+
     });
     // ok i might do the class thing then
     //aah sorry lol, ok i think that's all the questions i've got for now. tysm! haha ok 
     //yup.  if you have any more feel free to ask me 
-    //hold on one sec brb
+    //hold on one sec brb oh okay, i'm so sorry i disappeared for so long, had some chores i had to do. 
+    //i have to go again in a sec tho (i should be back  in an hour ish i think) but i'll see if it works for me real quick
+    //update: 6:42 pst, it's still times new roman for me
+    //try clearing your cache.  thats been the problem for me before.  
     //The font-family is tohoma.  I think it works
 });
