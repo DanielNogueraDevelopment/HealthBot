@@ -35,7 +35,7 @@ $(document).ready(function() {
     //all code runs here where page is loaded
     $(".add").click(function() {
         // here
-        var contact = "<div><input type='tel'> <span class='yeehaw'>Insert number here</span></input><a href='#' class ='call'> CALL </a></div>"
+        var contact = "<div><input type='tel'> <span class='yeehaw'>Insert number here</span></input><a href='#' >    CALL </a></div>"
 
         $(".contact-list").append(contact);
         $(".contact-list div:last-child input").on("change keyup paste", function chg() {
@@ -45,12 +45,16 @@ $(document).ready(function() {
         });
 
     });
-    // ok i might do the class thing then
-    //aah sorry lol, ok i think that's all the questions i've got for now. tysm! haha ok 
-    //yup.  if you have any more feel free to ask me 
-    //hold on one sec brb oh okay, i'm so sorry i disappeared for so long, had some chores i had to do. 
-    //i have to go again in a sec tho (i should be back  in an hour ish i think) but i'll see if it works for me real quick
-    //update: 6:42 pst, it's still times new roman for me
-    //try clearing your cache.  thats been the problem for me before.  
-    //The font-family is tohoma.  I think it works
+
+    $(".search").click(function() {
+            var ref = cordova.InAppBrowser.open("https://www.webmd.com/search/search_results/default.aspx?query=" + $(".symptoms").val(), "_blank", "location=yes")
+        })
+        // ok i might do the class thing then
+        //aah sorry lol, ok i think that's all the questions i've got for now. tysm! haha ok 
+        //yup.  if you have any more feel free to ask me 
+        //hold on one sec brb oh okay, i'm so sorry i disappeared for so long, had some chores i had to do. 
+        //i have to go again in a sec tho (i should be back  in an hour ish i think) but i'll see if it works for me real quick
+        //update: 6:42 pst, it's still times new roman for me
+        //try clearing your cache.  thats been the problem for me before.  
+        //The font-family is tohoma.  I think it works
 });

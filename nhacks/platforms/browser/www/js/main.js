@@ -35,17 +35,15 @@ $(document).ready(function() {
     //all code runs here where page is loaded
     $(".add").click(function() {
         // here
-        var contact = "<div><input type='tel'> <span class='yeehaw'>Insert their number here</span></input><a href='#'>CALL</a></div>"
-            //You can't use double quotations.  only single quotations  gotnicchea
+        var contact = "<div><input type='tel'> <span class='yeehaw'>Insert numbber here</span></input><a href='#' >    CALL </a></div>"
+
         $(".contact-list").append(contact);
         $(".contact-list div:last-child input").on("change keyup paste", function chg() {
             console.log("yo, num changed!") //haha love this <- lol yeah i used that for bug testing noice
             me = $(".contact-list div:last-child input")
             me.next().attr("href", "tel:" + me.val())
         });
-        // there's no way for me to use css styling on the insert number here thing right? oh cool, do i just do style = "" like in html or something else?
-        //that works.  I think giving it a class from the css file would work too.  
-        //ok.  The inserted html is still just normal html
+
     });
     // ok i might do the class thing then
     //aah sorry lol, ok i think that's all the questions i've got for now. tysm! haha ok 
