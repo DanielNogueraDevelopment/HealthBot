@@ -35,7 +35,7 @@ $(document).ready(function() {
     //all code runs here where page is loaded
     $(".add").click(function() {
         // here
-        var contact = "<div><input type='tel'> <span class='yeehaw'>Insert numbber here</span></input><a href='#' >    CALL </a></div>"
+        var contact = "<div><input type='tel'> <span class='yeehaw'>Insert number here</span></input><a href='#' >    CALL </a></div>"
 
         $(".contact-list").append(contact);
         $(".contact-list div:last-child input").on("change keyup paste", function chg() {
@@ -43,6 +43,16 @@ $(document).ready(function() {
             me = $(".contact-list div:last-child input")
             me.next().attr("href", "tel:" + me.val())
         });
+
+    });
+
+    $(".search").click(function() {
+        try { cordova } catch (e) {
+            if (e) {
+                document.location.href = "https://www.healthline.com/symptom/" + ($(".symptoms").val()).toLowerCase();
+            }
+        }
+        var ref = cordova.InAppBrowser.open(("https://www.healthline.com/symptom/" + $(".symptoms").val()).toLowerCase(), "_blank", "location=yes")
 
     });
     // ok i might do the class thing then
