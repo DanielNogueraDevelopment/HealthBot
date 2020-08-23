@@ -48,7 +48,7 @@ CSS is a wonderful language to learn in general for web development
         <body>
             <header style="text-align: center; background-color: #F7FDFF">
 
-                <hr style="border: 1px solid white" />
+                <hr style="border: 1px solid rgba(255, 255, 255, 0.925)" />
                 <img src="img/healthbot.JPG" alt="logo" style="width: 40%;margin-bottom: 3%; margin-top: 3%">
 
                 <table class="navmenu">
@@ -65,14 +65,15 @@ CSS is a wonderful language to learn in general for web development
             <div class="alarm">
                 <p>You can add as many medication notifications as you wish to</p>
                 <label>Medication:</label><input type="text" text="medication" id="med">,
-                <label>Daily hour (military time):</label><input type="text" text="medication" id="time">,
+                <label>hour:</label><input type="text" text="medication" id="time-h">,
+                <label>minute:</label><input type="text" text="medication" id="time-m">
                 <button id="add">Add daily notification</button id="add">
                 <script>
                     $(document).ready(function(){
                         $("#add").click(function(){
                             cordova.plugins.notification.local.schedule({
-                            title:"Make sure you take your " + $("#med").val(),
-                            trigger: {every:{hour:$("$time").val()}}
+                            title:"Take your " + $("#med").val(),
+                            trigger: {every:{hour:$("$time-h").val(), minute:$("$time-m")}}
                         })
                     })
                     })

@@ -35,24 +35,32 @@
                     <tr>
                         <td style="width: 25%"> <a href="index.html"> Home </a> </td>
                         <td style="width: 25%"> <a href="index.html"> Symptom Check </a> </td>
-                        <td style="width: 25%"> <a href="index.html"> Medication Alarm </a> </td>
+                        <td style="width: 25%"> <a href="Medication.html"> Medication Alarm </a> </td>
                         <td style="width: 25%"> <a href="emergency.html"> Emergency System </a> </td>
                 </table>
 
                 <hr style="border: 1px solid white" />
             </header>
+            <div class="words">
+                <div class="emergency-contacts">
+                    <h2>Emergency Contacts</h2>
+                    <div class="contact-list" style="margin-left: 3%">
+                        <!-- there is no css for contact-list yet.  It is where all the contact elements are stored
+                        the contact element generator is at main.js line 37 -->
 
-            <div class="emergency-contacts">
-                <p>Emergency Contacts</p>
-                <div class="contact-list">
-
+                    </div>
+                    <span class="add" style="color:white; background-color: blue; margin-left: 3%">+</span>
+                    <!-- This little plus icon adds new numbers -->
                 </div>
-                <span class="add" style="color:white; background-color: blue;">+</span>
             </div>
+            <!--Hey! What does the contact-list class do and where is it? No I mean the css for the class Ohh okay. 
+                I was so confused at first lol. Ok. Also, where is the thing that says "Insert number here". Ya, ik. 
+                But when I go to the localhost thing to see the page, there's words on the side that say insert number here and I was just wondering where in the code that is -->
+            <!-- oh, right.  those are generated through javascript.  main.js line 37 is where that html is generated oh okay thank you so much! -->
 
-
-
-
+            <!-- Hi again lol, so I tried to change the font-family property to tahoma, but it's still times new roman. 
+    Idk if I did something wrong on the main.js file or ...? ok-->
+            <!-- ill check it out -->
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
